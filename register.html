@@ -3,19 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accedi</title>
+    <title>Register</title>
 
     <!-- LINK AI FILE CSS -->
+    <link href="./style/reset_body_footer.css" rel="stylesheet" />
     <link href="./style/register.css" rel="stylesheet" />
-    <link href="./style/login.css" rel="stylesheet" />
   </head>
   <main>
   <body>
     <header>
+      <h2>Benvenuto su</h2>
       <a href="./index.html"><h1>CineVerse</h1></a>
-      <h2>Login</h2>
     </header>
-    <section>
+
+    <section class="hero">
       <form action="login">
         <div class="inp-border a1">
           <input
@@ -37,11 +38,20 @@
           />
         </div>
 
-        <button type="submit">Accedi</button>
-        <a href="./register.html" alt="register"
-          >(Non hai un account? Clicca qua per registrarti)</a
+        <label class="checkbox-label"><input type="checkbox" class="checkbox"> Iscriviti alla Newsletter per ricevere aggiornamenti su nuove uscite e promozioni speciali</input></label>
+
+        <div class="button"><button type="submit">Registrati</button></div>
+        <a href="./login.html" alt="login"
+          >(Hai già un account? Clicca qua per accedere al tuo account)</a
         >
       </form>
+      <div class="undertitle">
+        <h2>Scopri il meglio di film e serie TV</h2>
+        <p>
+          Dai classici intramontabili alle ultime uscite - tutto in un unico
+          universo cinematografico.
+        </p>
+      </div>
     </section>
     </main>
     <footer>© 2025 CineVerse — Design by Petri Andrea</footer>
