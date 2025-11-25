@@ -1,0 +1,21 @@
+/* --- SEZIONE CONTATTI --- */
+.contact {
+    background: #111;
+    text-align: center;
+    padding: 48px 16px;
+}
+
+.contact p {
+    margin: 8px 0;
+    color: #ccc;
+}
+
+.contact a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    color: yellow;
+
+}

@@ -1,0 +1,82 @@
+/* NAVBAR */
+header {
+    position: sticky;
+    top: 0;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 48px;
+    z-index: 100;
+}
+
+a h1 {
+    text-decoration: none;
+}
+header h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    color: yellow;
+    text-shadow: 2px 2px 8px rgba(248, 252, 9, 0.8);
+    letter-spacing: 2px;
+    font-size: 70px;
+    margin: 0;
+}
+
+/* Contenitore nav che gestisce ricerca + link */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    /* spazio uniforme tra form e link */
+}
+
+/* Barra di ricerca */
+nav form {
+    display: flex;
+    align-items: center;
+    background-color: #222;
+    border-radius: 25px;
+    padding: 6px 12px;
+}
+
+nav input[type="search"] {
+    border: none;
+    background: transparent;
+    color: white;
+    padding: 10px 10px;
+    padding-left: 10px;
+    font-size: 16px;
+    outline: none;
+    width: 180px;
+}
+
+nav button {
+    background-color: yellow;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #ffd700;
+}
+
+/* Link del menu */
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease, font-size 0.3s ease;
+    font-weight: 700;
+}
+
+nav a:hover {
+    color: yellow;
+    font-weight: 1000;
+    font-size: 120%;
+}
+
+

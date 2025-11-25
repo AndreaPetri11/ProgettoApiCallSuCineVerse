@@ -1,0 +1,209 @@
+/* --- RESPONSIVE DESIGN --- */
+
+
+/* 1024px */
+@media (max-width: 1024px) {
+    .hero {
+        align-items: center;
+        text-align: center;
+        background-position: center;
+        padding: 32px;
+    }
+
+    .hero h2 {
+        font-size: 27px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+}
+/* 768px */
+@media (max-width: 768px) {
+    .hero {
+        height: 500px;
+        align-items: center;
+        text-align: center;
+        background-position: center;
+        padding: 24px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .hero p {
+        font-size: 14px;
+        max-width: 90%;
+    }
+
+    .hero a {
+        padding: 11px 24px;
+        font-size: 14px;
+    }
+}
+
+/* 480px */
+@media (max-width: 480px) {
+    .hero {
+        height: auto;
+        padding: 32px 16px;
+        text-align: center;
+        align-items: center;
+        background-position: center;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+
+    .hero p {
+        font-size: 13px;
+        margin-bottom: 24px;
+    }
+
+    .hero a {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+        .mobile-nav {
+            max-width: 90%;
+            padding: 10px 0;
+            border-radius: 20px 20px 0 0;
+        }
+    
+        .mobile-nav a {
+            font-size: 14px;
+        }
+    
+        header nav form input[type="search"] {
+            width: 140px;
+        }
+}
+
+/* NAV MOBILE SEMPRE VISIBILE E CENTRATA */
+.mobile-nav {
+    visibility: hidden;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 600px;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 13px 0;
+    border-top: 2px solid yellow;
+    z-index: 999;
+    box-shadow: 0 -2px 15px rgba(255, 255, 0, 0.25);
+    border-radius: 16px 16px 0 0;
+}
+
+/* --- LAYOUT MOBILE: NAV SOTTO IL FOOTER 1195px--- */
+@media (max-width: 1195px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Nascondi solo i link del menu, NON la barra di ricerca */
+    header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    /* Mostra solo la barra di ricerca */
+    header nav form {
+        display: flex;
+        margin-top: 12px;
+    }
+
+    /* Nascondi i link del menu principale */
+    header nav a {
+        display: none;
+    }
+
+    /* NAV MOBILE visibile */
+    .mobile-nav {
+        visibility: visible;
+    }
+
+    /* Spazio extra per la nav fissa */
+    body::after {
+        content: "";
+        display: block;
+        height: 80px;
+    }
+
+    .mobile-nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 700;
+        transition: color 0.3s, transform 0.2s;
+    }
+
+    .mobile-nav a:hover {
+        color: yellow;
+        transform: scale(1.1);
+    }
+
+    /* Layout verticale */
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    section {
+        flex: 1;
+    }
+
+    footer {
+        margin-top: auto;
+    }
+}
+/* 456px */
+@media (max-width: 456px) {
+    .hero {
+        padding: 24px 12px;
+    }
+
+    .hero h2 {
+        font-size: 16px;
+    }
+
+    .hero p {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .hero a {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    /* NAV MOBILE ancora più compatta */
+    .mobile-nav {
+        max-width: 95%;
+        padding: 8px 0;
+        border-radius: 18px 18px 0 0;
+        
+    }
+
+    .mobile-nav a {
+        font-size: 12px;
+    }
+
+    /* Riduci la larghezza della barra di ricerca */
+    header nav form input[type="search"] {
+        width: 120px;
+        font-size: 13px;
+    }
+
+    nav {gap: 0px;}
+}

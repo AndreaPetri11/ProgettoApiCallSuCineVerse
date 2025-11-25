@@ -1,0 +1,151 @@
+header {
+    position: sticky;
+    top: 0;
+    background-color: black;
+    width: 100%;
+    z-index: 100;
+}
+
+header h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    color: yellow;
+    text-shadow: 2px 2px 8px rgba(248, 252, 9, 0.8);
+    letter-spacing: 2px;
+    font-size: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    color: yellow;
+    letter-spacing: 2px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    font-family: "Montserrat", sans-serif;
+    font-size: 100px;
+    margin-left: 13px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form centrato in verticale */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    justify-content: center;
+}
+
+label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.inp-border {
+    padding: 10px;
+    margin: 20px;
+    border-radius: 67px;
+    width: 400px;
+    transition: box-shadow 0.3s ease;
+}
+
+.input {
+    text-align: center;
+    padding: 20px;
+    outline: none;
+    border: solid 1px yellow;
+    background: black;
+    border-radius: 67px;
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    color: yellow;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.input::placeholder {
+    color: yellow;
+    opacity: 0.6;
+    font-size: 18px;
+}
+
+/* Effetto glow sugli input */
+.input:focus {
+    box-shadow: 0px 0px 15px 3px yellow;
+    background-color: #111;
+}
+
+.input:hover {
+    box-shadow: 0px 0px 10px 2px yellow;
+}
+
+
+/*Link Registrati*/
+a {
+    font-family: "Montserrat", sans-serif;
+        font-size: 15px;
+        margin-left: 13px;
+        margin-top: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: yellow;
+}
+/*BUTTON ACCEDI/REGISTRATI*/
+button {
+    margin-top: 30px;
+    padding: 30px 50px;
+    font-size: 22px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    color: yellow;
+    background-color: black;
+    border: 3px solid yellow;
+    border-radius: 67px;
+    cursor: pointer;
+    transition: all 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* BUTTON effetto Glow + effetto hover */
+button:hover {
+    background-color: yellow;
+    color: black;
+    box-shadow: 0px 0px 20px 5px yellow;
+}
+
+
+/* LOGO RESPONSIVE*/
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 36px;
+    }
+}
