@@ -7,11 +7,11 @@
   text-decoration: none;
 }
 
-#toggleMovies:hover {
+#Movies:hover {
   box-shadow: 0 0 10px 2px yellow;
   cursor: pointer;
 }
-#toggleTvSeries:hover {
+#TvSeries:hover {
   box-shadow: 0 0 10px 2px yellow;
   cursor: pointer;
 }

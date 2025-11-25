@@ -55,11 +55,11 @@ async function fetchGenres() {
 fetchGenres();
 
 // Toggle Movie Categories
-document.getElementById("toggleMovies").addEventListener("click", () => {
-  document.getElementById("toggleMovies").classList.toggle("open");
+document.getElementById("Movies").addEventListener("click", () => {
+  document.getElementById("Movies").classList.toggle("open");
 });
 
 // Toggle TV Series Categories
-document.getElementById("toggleTvSeries").addEventListener("click", () => {
-  document.getElementById("toggleTvSeries").classList.toggle("open");
+document.getElementById("TvSeries").addEventListener("click", () => {
+  document.getElementById("TvSeries").classList.toggle("open");
 });
