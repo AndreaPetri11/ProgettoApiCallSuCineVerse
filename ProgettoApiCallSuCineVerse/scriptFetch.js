@@ -9,25 +9,57 @@ const options = {
   },
 };
 
-const url = "https://api.themoviedb.org/3/genre/movie/list?language=en";
+const API_BASE_URL = "https://api.themoviedb.org/3/genre";
 
 const catMovieList = document.getElementById("catMovieList");
+const catTvSeriesList = document.getElementById("catTvSeriesList");
 
 // FILM  //
-async function fetchGenresMovies() {
-  const data = await apiCallCineVerse(url, options);
+async function fetchGenres() {
+  const movies = await apiCallCineVerse(
+    `${API_BASE_URL}/movie/list?language=en`,
+    options
+  );
 
-  if (!data || !data.genres) {
-    console.error("Errore nel caricamento dei generi film");
+  const tvSeries = await apiCallCineVerse(
+    `${API_BASE_URL}/tv/list?language=en`,
+    options
+  );
+
+  if (!movies || !movies.genres) {
+    console.error("Errore nel caricamento dei generi dei film");
     return;
   }
 
-  data.genres.forEach((genre) => {
+  if (!tvSeries || !tvSeries.genres) {
+    console.error("Errore nel caricamento dei generi delle serie tv");
+    return;
+  }
+
+  // film
+  movies.genres.forEach((genre) => {
     const div = document.createElement("div");
     div.classList.add("cards");
     div.innerHTML = `<h3>${genre.name}</h3>`;
     catMovieList.appendChild(div);
   });
-}
 
-fetchGenresMovies();
+  // serie TV
+  tvSeries.genres.forEach((genre) => {
+    const div = document.createElement("div");
+    div.classList.add("cards");
+    div.innerHTML = `<h3>${genre.name}</h3>`;
+    catTvSeriesList.appendChild(div);
+  });
+}
+fetchGenres();
+
+// Toggle Movie Categories
+document.getElementById("toggleMovies").addEventListener("click", () => {
+  document.getElementById("toggleMovies").classList.toggle("open");
+});
+
+// Toggle TV Series Categories
+document.getElementById("toggleTvSeries").addEventListener("click", () => {
+  document.getElementById("toggleTvSeries").classList.toggle("open");
+});

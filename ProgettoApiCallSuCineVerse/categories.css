@@ -1,0 +1,40 @@
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 40px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#toggleMovies:hover {
+  box-shadow: 0 0 10px 2px yellow;
+  cursor: pointer;
+}
+#toggleTvSeries:hover {
+  box-shadow: 0 0 10px 2px yellow;
+  cursor: pointer;
+}
+
+.cat-content {
+  display: none;
+  margin-left: 40px;
+  margin-top: 50px;
+}
+
+.catTitle {
+  text-align: center;
+  padding: 20px;
+  width: 110%;
+  font-size: 30px;
+  color: yellow;
+  border: solid 1px yellow;
+  background: black;
+  border-radius: 67px;
+  outline: none;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.catTitle.open + .cat-content {
+  display: block;
+}

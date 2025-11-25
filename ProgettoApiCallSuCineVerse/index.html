@@ -14,7 +14,7 @@
     <link href="./navbar.css" rel="stylesheet" />
     <link href="./herosection.css" rel="stylesheet" />
     <link href="./responsive.css" rel="stylesheet" />
-    <link href="./grid_card.css" rel="stylesheet" />
+    <link href="./categories.css" rel="stylesheet" />
     <link href="./contatti.css" rel="stylesheet" />
   </head>
 
@@ -54,16 +54,17 @@
         <a href="#film">Inizia a esplorare</a>
       </section>
 
-      <!-- CARDS FILM-->
-      <section id="film">
-        <h3>Categorie Film</h3>
-        <div id="catMovieList"></div>
-      </section>
+      <!--categorie-->
+      <section class="categories">
+        <div class="block">
+          <span class="catTitle" id="toggleMovies">Categorie Film</span>
+          <div id="catMovieList" class="cat-content"></div>
+        </div>
 
-      <!-- CARDS SERIE TV -->
-      <section id="Serietv">
-        <h3>Categorie Serie TV</h3>
-        <div id="catTvList"></div>
+        <div class="block">
+          <span class="catTitle" id="toggleTvSeries">Categorie Serie TV</span>
+          <div id="catTvSeriesList" class="cat-content"></div>
+        </div>
       </section>
 
       <section class="contact" id="contatti">
